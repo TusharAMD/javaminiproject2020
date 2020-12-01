@@ -11,78 +11,99 @@ public class Music extends Applet implements ActionListener
     Image backGround;
     long current;
     Clip clip;
+    
+    
     public static String data;
+    Image picture;  
+    
     
     //Initialize the applet
     public void init()
     {
-    setSize(700, 1000);
-    //setBackground(Color.white);
-    //Create image icons for the buttons
-    pause = new ImageIcon("icon_pause.png");
-    play = new ImageIcon("icon_play.png");
-    stop = new ImageIcon("icon_stop.png");
-    replay = new ImageIcon("icon_replay.png");
-    
-    /************************/
-    /*
-    Frame f= new Frame(); 
-    
-    
-    Choice c=new Choice();
-    JPanel p = new JPanel();
-    //c.setBounds(500,500, 500,500);  
-    c.setLocation(500,500);
-    c.add("C");  
-    c.add("C++");  
-    c.add("Java");  
-    c.add("PHP");  
-    c.add("Android");
-    Button b=new Button("Show"); 
-    b.setBounds(200,100,50,20);  
-    b.addActionListener(new ActionListener() {  
-            public void actionPerformed(ActionEvent e) {       
-             String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
-             label.setText(data);  
-            }  
-        }) ;   
-    
-    
-    add(c);
-
-    */
- 
-   /*
-        final Label label = new Label();          
-        label.setAlignment(Label.CENTER);  
-        label.setSize(400,100);  
-        Button b=new Button("Show");  
-        b.setBounds(600,100,50,20);  
-        final Choice c=new Choice();  
-        c.setBounds(100,100, 75,75);  
-        c.add("C");  
-        c.add("C++");  
-        c.add("Java");  
-        c.add("PHP");  
-        c.add("Android");  
-        add(c);add(label);add(b);  
-          
+            setSize(700, 1000);
+            //setBackground(Color.white);
+            //Create image icons for the buttons
+            pause = new ImageIcon("icon_pause.png");
+            play = new ImageIcon("icon_play.png");
+            stop = new ImageIcon("icon_stop.png");
+            replay = new ImageIcon("icon_replay.png");
+            
+            /************************/
+            picture = getImage(getDocumentBase(),"abc.jpg");  
+            /*
+            Frame f= new Frame(); 
+            
+            
+            Choice c=new Choice();
+            JPanel p = new JPanel();
+            //c.setBounds(500,500, 500,500);  
+            c.setLocation(500,500);
+            c.add("C");  
+            c.add("C++");  
+            c.add("Java");  
+            c.add("PHP");  
+            c.add("Android");
+            Button b=new Button("Show"); 
+            b.setBounds(200,100,50,20);  
+            b.addActionListener(new ActionListener() {  
+                    public void actionPerformed(ActionEvent e) {       
+                     String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
+                     label.setText(data);  
+                    }  
+                }) ;   
+            
+            
+            add(c);
         
-        b.addActionListener(new ActionListener() {  
-            public void actionPerformed(ActionEvent e) {       
-             String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
-             label.setText(data);  
-            }  
-        }) ;           
-    */
-    
-    
-    
-    
-    
-    /****************************/
-    }
+            */
+         
+           /*
+                final Label label = new Label();          
+                label.setAlignment(Label.CENTER);  
+                label.setSize(400,100);  
+                Button b=new Button("Show");  
+                b.setBounds(600,100,50,20);  
+                final Choice c=new Choice();  
+                c.setBounds(100,100, 75,75);  
+                c.add("C");  
+                c.add("C++");  
+                c.add("Java");  
+                c.add("PHP");  
+                c.add("Android");  
+                add(c);add(label);add(b);  
+                  
+                
+                b.addActionListener(new ActionListener() {  
+                    public void actionPerformed(ActionEvent e) {       
+                     String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
+                     label.setText(data);  
+                    }  
+                }) ;           
+            */
+            
+            
+            
+            
+            
+            /****************************/
+            }
     //Add buttons to applet and load the sound
+    
+    
+    public void paint(Graphics g) {  
+    g.drawImage(picture, 30,30, this);  
+  }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public void start()
     {
         JButton b_pause = new JButton(pause);
@@ -107,11 +128,13 @@ public class Music extends Applet implements ActionListener
         final Choice c=new Choice();
         final Label label = new Label();
         
-        c.add("FurElise.wav");  
         c.add("sound1.wav");  
-        c.add("NightMusic.mp3");  
-        c.add("sound.wav");  
-        c.add("Android");
+        c.add("sound2.wav");  
+        c.add("sound3.wav");  
+        c.add("sound4.wav");  
+        c.add("sound5.wav");
+        c.add("Eine_Kleine_Nachtmusik.wav");
+        c.add("Spring.wav");
         this.add(c);
         Button b=new Button("Play this One");
         this.add(b);
@@ -145,13 +168,6 @@ public class Music extends Applet implements ActionListener
                 {
                     System.out.println(E.getMessage());
                 }
-             
-             
-             
-             
-             
-             
-             
              
              
              

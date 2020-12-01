@@ -22,10 +22,10 @@ public class ChoiceExample
         f.setVisible(true);  
         b.addActionListener(new ActionListener() {  
             public void actionPerformed(ActionEvent e) {       
-         String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
-         label.setText(data);  
-        }  
-        });           
+             String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());  
+             label.setText(data);  
+            }  
+        }) ;           
         }  
 public static void main(String args[])  
 {  
